@@ -31,4 +31,9 @@ export const Container = styled.div`
       color: #fff;
     }
   }
+
+  @media (max-width: 750px) {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
 `;

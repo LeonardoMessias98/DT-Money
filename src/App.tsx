@@ -4,6 +4,8 @@ import Dashboard from 'components/Dashboard';
 import Header from 'components/Header';
 import NewTransactionModal from 'components/NewTransactionModal';
 
+import Provider from 'hooks';
+
 import { GlobalStyle } from './styles/global';
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
   }
 
   return (
-    <>
+    <Provider>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal}/>
       <Dashboard />
 
@@ -27,7 +29,7 @@ function App() {
         onRequestClose={handleCloseNewTransactionModal}
       />
       <GlobalStyle />
-    </>
+    </Provider>
   );
 }
 
